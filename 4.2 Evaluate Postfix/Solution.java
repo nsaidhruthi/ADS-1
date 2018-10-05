@@ -54,26 +54,26 @@ class stack
 			}
 		else
 		{
-			int sum=0;
+	//		int sum=0;
 			int v=s.pop();
 			int v2=s.pop();
 			switch(c)
 			{
 			case '+':
-				sum=v+v2;
-				s.push(sum);
+		//		sum=v+v2;
+				s.push(v+v2);
 				break;
 			case '-':
-				sum=v-v2;
-				s.push(sum);
+			//	sum=v-v2;
+				s.push(v-v2);
 				break;
 			case '*':
-				sum=v*v2;
-				s.push(sum);
+				//sum=v*v2;
+				s.push(v*v2);
 				break;
 			case '/':
-				sum=v/v2;
-				s.push(sum);
+				//sum=v/v2;
+				s.push(v/v2);
 				break;
 		    }
 			
