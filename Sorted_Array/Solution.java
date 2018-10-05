@@ -18,16 +18,13 @@ public class Solution {
     // System.out.println("enter array elements");
 String w1[]=null;
 String w2[]=null;
-String s=null;
+
      a=new int[n];
      b=new int[m];
-	 try{
-s=sc.next();
-	 }
-	 catch(Exception e)
-{}
-finally{
+String s=sc.next();
+System.out.println(s);
 String s3=sc.next();
+System.out.println(s3);
 w1=s.split("[,.]");
 w2=s3.split("[,.]");
 
@@ -84,7 +81,7 @@ w2=s3.split("[,.]");
          else
        System.out.print(c[k]);
      }
-}
+
 	}
 
 }
