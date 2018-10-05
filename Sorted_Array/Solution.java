@@ -21,12 +21,15 @@ public class Solution {
      for(int i=0;i<n;i++)
      {
     	 //System.out.println("a["+i+"]");
-    	 a[i]=sc.nextInt();
+    	 String s=sc.next();
+    	 a[i]=Integer.parseInt(s);
+    	 
      }
      for(int j=0;j<m;j++)
      {
     	// System.out.println("b["+j+"]");
-    	 b[j]=sc.nextInt();
+    	 String s=sc.next();
+    	 b[j]=Integer.parseInt(s);
      }
      int[] c;
      int i=0,j=0,k=0;
