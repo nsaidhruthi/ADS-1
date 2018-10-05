@@ -5,8 +5,8 @@ public class Solution {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-     int[] a;
-     int[] b;
+     int[] a=null;
+     int[] b=null;
      int n,m;
      Scanner sc=new Scanner(System.in);
      //System.out.println("enter number of elements in first array");
@@ -16,12 +16,19 @@ public class Solution {
      n=Integer.parseInt(s1);
      m=Integer.parseInt(s2);
     // System.out.println("enter array elements");
+String w1[]=null;
+String w2[]=null;
+try{
      a=new int[n];
      b=new int[m];
 String s=sc.next();
 String s3=sc.next();
-String w1[]=s.split("[,.]");
-String w2[]=s3.split("[,.]");
+w1=s.split("[,.]");
+w2=s3.split("[,.]");
+}
+catch(Exception e)
+{}
+finally{
      for(int i=0;i<n;i++)
      {
     	 //System.out.println("a["+i+"]");
@@ -73,6 +80,7 @@ String w2[]=s3.split("[,.]");
          else
        System.out.print(c[k]);
      }
+}
 	}
 
 }
