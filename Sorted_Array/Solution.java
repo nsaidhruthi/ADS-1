@@ -1,18 +1,20 @@
-import java.util.Arrays;
+import java.util.*;
+import java.io.*;
 import java.util.Scanner;
 
 public class Solution {
 
-	public static void main(String[] args) {
+	public static void main(String[] args)throws Exception {
 		// TODO Auto-generated method stub
      int[] a=null;
      int[] b=null;
      int n,m;
      Scanner sc=new Scanner(System.in);
+	 BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
      //System.out.println("enter number of elements in first array");
-    String s1=sc.next();
+    String s1=br.readLine();
      //System.out.println("enter number of elements in second array");
-     String s2=sc.nextLine();
+     String s2=br.readLine();
      n=Integer.parseInt(s1);
      m=Integer.parseInt(s2);
     // System.out.println("enter array elements");
@@ -21,9 +23,9 @@ String w2[]=null;
 
      a=new int[n];
      b=new int[m];
-String s=sc.nextLine();
+String s=br.readLine();
 //System.out.println(s);
-String s3=sc.next();
+String s3=br.readLine();
 //System.out.println(s3);
 w1=s.split("[,.]");
 w2=s3.split("[,.]");
