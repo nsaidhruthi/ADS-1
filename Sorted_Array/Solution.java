@@ -12,7 +12,7 @@ public class Solution {
      //System.out.println("enter number of elements in first array");
     String s1=sc.next();
      //System.out.println("enter number of elements in second array");
-     String s2=sc.next();
+     String s2=sc.nextLine();
      n=Integer.parseInt(s1);
      m=Integer.parseInt(s2);
     // System.out.println("enter array elements");
@@ -21,10 +21,10 @@ String w2[]=null;
 
      a=new int[n];
      b=new int[m];
-String s=sc.next();
-System.out.println(s);
+String s=sc.nextLine();
+//System.out.println(s);
 String s3=sc.next();
-System.out.println(s3);
+//System.out.println(s3);
 w1=s.split("[,.]");
 w2=s3.split("[,.]");
 
