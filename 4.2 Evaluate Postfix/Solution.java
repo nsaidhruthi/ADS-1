@@ -89,7 +89,7 @@ public class Solution
 	{
 		Scanner sc=new Scanner(System.in);
 		String str;
-		str=sc.next();
+		str=sc.nextLine();
 		stack s=new stack();
 		System.out.println(s.postfix(str));
 	}
