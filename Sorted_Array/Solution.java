@@ -68,7 +68,10 @@ String w2[]=s3.split("[,.]");
      //System.out.println("after sorting");
      for(k=0;k<c.length;k++)
      {
+         if(k<c.length-1)
     	 System.out.print(c[k]+",");
+         else
+       System.out.print(c[k]);
      }
 	}
 
