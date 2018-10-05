@@ -9,11 +9,11 @@ public class Solution {
      int[] b;
      int n,m;
      Scanner sc=new Scanner(System.in);
-     System.out.println("enter number of elements in first array");
+     //System.out.println("enter number of elements in first array");
      n=sc.nextInt();
-     System.out.println("enter number of elements in second array");
+     //System.out.println("enter number of elements in second array");
      m=sc.nextInt();
-     System.out.println("enter array elements");
+     //System.out.println("enter array elements");
      a=new int[n];
      b=new int[m];
      for(int i=0;i<n;i++)
@@ -59,7 +59,7 @@ public class Solution {
      //System.out.println("after sorting");
      for(k=0;k<c.length;k++)
      {
-    	 System.out.print(c[k]);
+    	 System.out.print(c[k]+",");
      }
 	}
 
