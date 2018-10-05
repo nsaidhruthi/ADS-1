@@ -18,18 +18,22 @@ public class Solution {
     // System.out.println("enter array elements");
      a=new int[n];
      b=new int[m];
+String s=sc.next();
+String s3=sc.next();
+String w1[]=s.split("[,.]");
+String w2[]=s3.split("[,.]");
      for(int i=0;i<n;i++)
      {
     	 //System.out.println("a["+i+"]");
-    	 String s=sc.next();
-    	 a[i]=Integer.parseInt(s);
+    	 
+    	 a[i]=Integer.parseInt(w1[i]);
     	 
      }
      for(int j=0;j<m;j++)
      {
     	// System.out.println("b["+j+"]");
-    	 String s=sc.next();
-    	 b[j]=Integer.parseInt(s);
+    	 //String s=sc.next();
+    	 b[j]=Integer.parseInt(w2[j]);
      }
      int[] c;
      int i=0,j=0,k=0;
