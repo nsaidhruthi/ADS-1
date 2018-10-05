@@ -91,6 +91,6 @@ public class Solution
 		String str;
 		//str=sc.next();
 		stack s=new stack();
-		System.out.println(s.postfix("7 16 2 + *"));
+		System.out.println(s.postfix("str"));
 	}
 }
