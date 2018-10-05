@@ -18,17 +18,21 @@ public class Solution {
     // System.out.println("enter array elements");
 String w1[]=null;
 String w2[]=null;
-try{
+String s=null;
      a=new int[n];
      b=new int[m];
-String s=sc.next();
+	 try{
+s=sc.next();
+	 }
+	 catch(Exception e)
+{}
+finally{
 String s3=sc.next();
 w1=s.split("[,.]");
 w2=s3.split("[,.]");
-}
-catch(Exception e)
-{}
-finally{
+
+
+
      for(int i=0;i<n;i++)
      {
     	 //System.out.println("a["+i+"]");
