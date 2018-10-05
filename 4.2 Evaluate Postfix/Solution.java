@@ -89,8 +89,8 @@ public class Solution
 	{
 		Scanner sc=new Scanner(System.in);
 		String str;
-		//str=sc.next();
+		str=sc.next();
 		stack s=new stack();
-		System.out.println(s.postfix("str"));
+		System.out.println(s.postfix(str));
 	}
 }
