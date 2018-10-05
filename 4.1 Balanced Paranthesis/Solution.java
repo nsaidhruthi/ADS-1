@@ -34,7 +34,7 @@ public class Solution {
 		}
 		else
 		{
-			System.out.println("Stack is empty !");
+			//System.out.println("Stack is empty !");
 			return 0;
 		}
 	}
