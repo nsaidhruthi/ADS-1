@@ -84,8 +84,13 @@ class Paran
 	}
 	  
 	
-	  
+	  if(!pa.isEmpty())
+	       {
+	    	   System.out.println("NO");
+	       }
+	       else
 		   System.out.println("YES");
+		   //System.out.println("YES");
 	   		
 		
 	}
