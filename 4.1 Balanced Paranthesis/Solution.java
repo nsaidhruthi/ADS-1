@@ -70,7 +70,7 @@ class Paran
 		{
 			if(pa.isEmpty())
 			{
-				System.out.println("No");
+				System.out.println("NO");
 				return;
 			}
 			ch=pa.pop();
