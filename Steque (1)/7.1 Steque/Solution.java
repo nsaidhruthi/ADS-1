@@ -75,8 +75,7 @@ class Link
 		{
 		while(temp!=null)
 		{
-			
-			System.out.print(temp.item);
+			System.out.print(temp.item+"ppp");
 			temp=temp.next;
 			if(temp!=null)
 			System.out.print(", ");
