@@ -26,14 +26,10 @@ class Link
 			
 		}
 		else
-		{	Node temp =first;
-		while(temp.next!=null)
-		{
-			temp=temp.next;
-		}
+		{	
 		
-		temp.next=n;
-		
+		n.next=first;
+                 first=n;
 		}
 	}
 	public void enqueue(int item)
