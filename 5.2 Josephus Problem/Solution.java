@@ -53,36 +53,50 @@ public class Solution {
 	  Queue q=new Queue();
 	  BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 	  int test,n,m;
+	  String st[] = null;
 	  test=Integer.parseInt(br.readLine());
 	  while(test>0)
 	  {
 	  //System.out.println("n"+n);
 		  
 	    String s=br.readLine();
-	    String st[]=s.split(" ");
+	    try{
+	    st=s.split(" ");
 	     n=Integer.parseInt(st[0]);
 	      m=Integer.parseInt(st[1]);
-      StringBuilder str=new StringBuilder("");
-	  for(int i=0;i<n;i++)
-	  {
-		  q.enqueue(i);
+	      StringBuilder str=new StringBuilder("");
+		  for(int i=0;i<n;i++)
+		  {
+			  q.enqueue(i);
+		  }
+		  int count=0;
+		  while(!q.isEmpty())
+		  {
+			 if(count==m-1)
+			 {
+				 str.append(q.dequeue()+" ");
+				 count=0;
+			 }
+			 else
+			 {
+				 q.enqueue(q.dequeue());
+				 count++;
+			 }
+		  }
+		  System.out.println(str);  
+	    }
+	    
+	    catch(Exception e)
+	    {
+	    	
+	    }
+	    finally{
+	     // System.exit(0);
+	    }
+	     
+     
 	  }
-	  int count=0;
-	  while(!q.isEmpty())
-	  {
-		 if(count==m-1)
-		 {
-			 str.append(q.dequeue()+" ");
-			 count=0;
-		 }
-		 else
-		 {
-			 q.enqueue(q.dequeue());
-			 count++;
-		 }
-	  }
-	System.out.println(str);  
-      }
+      
   }
   }
 
