@@ -117,7 +117,7 @@ public static void main(String args[])
                     break;
 		        }
 		}
-       while(s.hasNext() && st.length()!=0);
+       while( st.length()!=0);
 	   if(i!=0)
 		{
 	     System.out.println();
