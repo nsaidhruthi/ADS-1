@@ -1,7 +1,7 @@
 
 
 import java.io.IOException;
-//import java.io.InputStreamReader;
+
 import java.util.Scanner;
 class Deque
 {
@@ -56,38 +56,52 @@ void pushRight(int item)
 }
 int  popleft()
 {
-	Node old=first;
-	first=first.next;
+
 	if(first==null)
 	{
-		last=null;
+		return 0;
 	}
 	else
-		first.prev=null;
-	n--;
-	return old.item;
+	{	Node temp1=first;
+	first=first.next;
+	   return temp1.item;
+	}
+	
 }
 int popright()
 {
-	Node old=last;
-	last=last.prev;
-	if(last==null)
+Node temp1=null;
+	
+	if(first==null)
+		
 	{
-		last=null;
+		return 0;
+	}
+	else if(first.next==null)
+	{Node temp=first;
+	first=null;
+		return temp.item;
 	}
 	else
 	{
-		last.next=null;
+		Node temp=first;
+	
+	while(temp.next.next!=null)
+	{
+		temp=temp.next;
 	}
-	n--;
-	return old.item;
+	temp1=temp.next;
+	temp.next=null;
+	return temp1.item;
+	}
+	
 }
 public void display()
 {	
 	Node temp=first;
 	if(first==null)
 	{
-		System.out.println("[]");
+		System.out.println("Deck is empty");
 	}
 	else
 	{
