@@ -1,7 +1,8 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 
+
+import java.io.IOException;
+//import java.io.InputStreamReader;
+import java.util.Scanner;
 class Deque
 {
 Node first=null;
@@ -81,6 +82,28 @@ int popright()
 	n--;
 	return old.item;
 }
+public void display()
+{	
+	Node temp=first;
+	if(first==null)
+	{
+		System.out.println("Deck is empty");
+	}
+	else
+	{
+		System.out.print("[");
+	while(temp!=null)
+	{
+		
+		System.out.print(temp.item);
+		temp=temp.next;
+		if(temp!=null)
+		System.out.print(", ");
+	}
+	System.out.print("]");
+	System.out.println();
+	}
+}
 public String toString()
 {
 	if(first.next==null)
@@ -94,37 +117,48 @@ public class Solution {
 
 	public static void main(String[] args) throws IOException
 	{
-		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-		Deque d=new Deque();
-		int n;
-		int[] a=null;
-		n=br.read();
-		String w1[]=null;
-		for(int i=0;i<=n;i++)
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		String st[]=new String[n+1];
+		int i;
+		for(i=0;i<n+1;)
 		{
-			String s=br.readLine();
-			w1=s.split(" ");
-			switch(w1[i])
+
+			st[i]=s.nextLine();
+			i++;
+		}
+
+		String st1[]=new String[2];
+		Deque l=new Deque();
+		int count=0;
+		for(i=0;i<(st.length);i++)
+		{
+			
+			st1=st[i].split(" ");
+			switch(st1[0])
 			{
-			case "isEmpty":
-				System.out.println(d.isEmpty());
-				break;
-			case "size":
-				System.out.println(d.size());
-				break;
 			case "pushLeft":
-				a[i]=Integer.parseInt(w1[i]);
-				d.pushLeft(a[i]);
-				break;
+		                     l.pushLeft(Integer.parseInt(st1[1]));
+		                     l.display();
+			                 break;
 			case "pushRight":
-				break;
-			case "popLeft":
-				System.out.println(d.popleft());
-				break;
-			case "popRight":
-				System.out.println(d.popleft());
-				break;
+		                     l.pushRight(Integer.parseInt(st1[1]));   
+		                     l.display();
+		                     break;
+			case "popLeft":l.popleft();
+							l.display();
+			
+			                 break;
+			case "popRight":l.popright();
+			                l.display();
+		                     break;
+			case "size":System.out.println(l.size());
+			                 break;
+			default:break;
+		   
+		                
 			}
+			
 		}
 	}
 
