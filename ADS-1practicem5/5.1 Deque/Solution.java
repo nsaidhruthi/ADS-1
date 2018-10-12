@@ -53,45 +53,31 @@ void pushRight(int item)
 }
 int  popleft()
 {
-
+	Node old=first;
+	first=first.next;
 	if(first==null)
 	{
-		return 0;
+		last=null;
 	}
 	else
-	{	Node temp1=first;
-	first=first.next;
-	   return temp1.item;
-	}
-	
+		first.prev=null;
+	n--;
+	return old.item;
 }
 int popright()
 {
-Node temp1=null;
-	
-	if(first==null)
-		
+	Node old=last;
+	last=last.prev;
+	if(last==null)
 	{
-		return 0;
-	}
-	else if(first.next==null)
-	{Node temp=first;
-	first=null;
-		return temp.item;
+		last=null;
 	}
 	else
 	{
-		Node temp=first;
-	
-	while(temp.next.next!=null)
-	{
-		temp=temp.next;
+		last.next=null;
 	}
-	temp1=temp.next;
-	temp.next=null;
-	return temp1.item;
-	}
-	
+	n--;
+	return old.item;
 }
 public void display()
 {	
@@ -114,14 +100,6 @@ public void display()
 	System.out.print("]");
 	System.out.println();
 	}
-}
-public String toString()
-{
-	if(first.next==null)
-	{
-		return first.item+"";
-	}
-	return null;	
 }
 }
 public class Solution {
