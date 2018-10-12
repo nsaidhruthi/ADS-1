@@ -117,11 +117,8 @@ public static void main(String args[])
                     break;
 		        }
 		}
-       while( st.length()!=0);
-	   if(i!=0)
-		{
-	     System.out.println();
-		}
+       while( s.hasNext() &&st.length()!=0);
+	  
 		}
 }
 }
