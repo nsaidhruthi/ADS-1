@@ -42,10 +42,14 @@ class Link
 			
 		}
 		else
-		{	n.next=first;
-		    first=n;
-		    
+		{	
+               Node temp=first;
+               while(temp.next!=null)
+               {
+              temp=temp.next;
 		}
+              temp.next=n; 
+                } 
 	}
 	public int pop()
 	{
