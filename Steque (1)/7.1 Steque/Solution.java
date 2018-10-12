@@ -71,7 +71,7 @@ class Link
 		String str="";
 		if(first==null)
 		{
-			System.out.println("Steque is empty");
+			System.out.println("Steque is empty.");
 		}
 		else
 		{
