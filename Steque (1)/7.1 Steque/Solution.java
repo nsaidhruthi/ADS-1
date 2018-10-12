@@ -1,6 +1,3 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Scanner;
 
 class Node
@@ -11,9 +8,7 @@ class Node
 	{
 		this.item=a;
 	}
-	public String toString() {
-		return item +""+next;
-	}
+	
 }
 class Link
 {
@@ -90,17 +85,12 @@ class Link
 		System.out.println();
 		}
 	}
-	public String toString() {
-		Node temp=first;
-		
-		return first+"";
-	}
 }
 public class Solution {
-public static void main(String args[]) throws IOException
+public static void main(String args[])
 {
-	 BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-	 int n=Integer.parseInt(br.readLine());
+	Scanner s=new Scanner(System.in);
+	int n=s.nextInt();
 	String st1[]=new String[2];
 	String st=null;
 	int i;
@@ -109,8 +99,8 @@ public static void main(String args[]) throws IOException
 		Link l=new Link();
        do
 		{
-			st=br.readLine();
-            st1=st.split(" ");
+			st=s.nextLine();
+				st1=st.split(" ");
 				switch(st1[0])
 				{
 				case "push":
@@ -127,7 +117,7 @@ public static void main(String args[]) throws IOException
                     break;
 		        }
 		}
-       while( st.length()!=0);
+       while(s.hasNext() && st.length()!=0);
 	   if(i!=0)
 		{
 	     System.out.println();
