@@ -105,17 +105,17 @@ public static void main(String args[])
 				case "push":
 			          l.push(Integer.parseInt(st1[1]));
 			          l.display();
-                      System.out.println();
+                
 				                 break;
 				case "enqueue":
 			          l.enqueue(Integer.parseInt(st1[1]));   
 			          l.display();
-			          System.out.println();
+			    //      System.out.println();
 			          break;
 				case "pop":
 					l.pop();
 					l.display();
-                    System.out.println();
+                  //  System.out.println();
 				    break;
 		        }
 		}
