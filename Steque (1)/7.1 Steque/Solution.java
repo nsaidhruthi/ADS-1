@@ -68,6 +68,7 @@ class Link
 	public void display()
 	{	
 		Node temp=first;
+		String str="";
 		if(first==null)
 		{
 			System.out.println("Steque is empty");
@@ -77,12 +78,13 @@ class Link
 		while(temp!=null)
 		{
 			
-			System.out.print(temp.item+"ppp");
+			//System.out.print(temp.item);
+			str=str+temp.item+", ";
 			temp=temp.next;
-			if(temp!=null)
-			System.out.print(",");
+			//if(temp!=null)
+			//System.out.print(",");
 		}
-		System.out.println();
+		System.out.println(str.substring(0,str.length()-2));
 		}
 	}
 }
@@ -117,7 +119,7 @@ public static void main(String args[])
                     break;
 		        }
 		}
-       while( s.hasNext() &&st.length()!=0);
+       while(s.hasNext() && st.length()!=0);
 	   if(i!=0)
 		{
 	     System.out.println();
