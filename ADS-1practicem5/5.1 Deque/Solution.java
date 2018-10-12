@@ -87,7 +87,7 @@ public void display()
 	Node temp=first;
 	if(first==null)
 	{
-		System.out.println("Deck is empty");
+		System.out.println("[]");
 	}
 	else
 	{
