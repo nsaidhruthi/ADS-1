@@ -81,7 +81,9 @@ public class Solution {
 			 count++;
 		 }
 	  }
-	System.out.println(str);  
+	int x=str.length();
+	  String su=str.substring(0,x-1);
+	System.out.println(su);    
 	test--;
       }
   }
