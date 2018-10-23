@@ -1,0 +1,2 @@
+Which method runs faster for an array with all keys identical, basic selection sort or basic insertion sort?
+Time complexity of selection and insertion both are o(n^2) but the insertion runs in linear time and selection runs quadratic.
