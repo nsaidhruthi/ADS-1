@@ -1,4 +1,4 @@
-
+//package m9;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,7 +11,7 @@ public class Solution {
      String a[]=null;
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
      String s;
-     while((s=br.readLine())!=null)
+     while((s=br.readLine())!=null && s!=" ")
      {
     	 String st[]=s.split(",");
     	// a.length=st.length;
@@ -22,26 +22,30 @@ public class Solution {
     		 a[i]=st[i];
     	 }
     	 merge m=new merge();
+    	 if(a.length>1)
+    	 {
          m.sort(a, 0, a.length-1);
          m.display(a);
+    	 }
+    	 else
+    	 {
+    		 System.exit(0);
+    	 }
          
      }
      
-         
-	}
-}
 //package m9;
-class merge {
-	public static void insertionsort(String a[],int l,int r)
+ class merge {
+	public  void insertionsort(String a[],int l,int r)
 	{
 		for (int i = l; i <= r; i++)
             for (int j = i; j > l && less(a[j], a[j-1]); j--)
                 exch(a, j, j-1);
 	}
-	  private static boolean less(Comparable a, Comparable b) {
+	  private  boolean less(Comparable a, Comparable b) {
 	        return a.compareTo(b) < 0;
 	    }
-	  private static void exch(String[] a, int i, int j) {
+	  private  void exch(String[] a, int i, int j) {
 	        String swap = a[i];
 	        a[i] = a[j];
 	        a[j] = swap;
@@ -135,4 +139,7 @@ System.out.println("array is already sorted. So, skipped the call to merge...");
 	}
 	System.out.println("]");
 }
+}
+         
+	}
 }
