@@ -52,7 +52,7 @@ public class Solution {
 	    }
 void merge(String[] a,int l,int m,int r)
 {
-	
+	System.out.println("Array is already sorted. So, skipped the call to merge...");
 	int p=m-l+1;
 	int q=r-m;
 	String L[]=new String[p];
@@ -123,7 +123,7 @@ void sort(String a[],int l,int r)
 void display(String a[])
 {
 	int n=a.length;
-System.out.println("array is already sorted. So, skipped the call to merge...");
+
 	System.out.print("[");
 	for(int i=0;i<n;i++)
 	{
