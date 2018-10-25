@@ -1,0 +1,22 @@
+//Given a non negative number n, return the factorial of n, which is n * (n-1) * (n-2)... 1. Compute the result recursively (without loops).
+
+public int fact(int n)
+{
+if(n==1||n==0) 
+{
+return 1;
+}
+else
+{
+return n*fact(n-1);
+}
+}
+
+
+fact(4)
+return 4*fact(3);
+return 3*fact(2);
+return 2*fact(1);
+return 1;
+Answer 24
+ 
