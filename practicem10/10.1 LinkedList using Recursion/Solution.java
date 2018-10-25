@@ -17,7 +17,7 @@ public class Solution {
 					switch(st[0])
 					{
 					case "insertAt":
-						if(Integer.parseInt(st[1])>=0)
+						if(Integer.parseInt(st[1])>=0&&Integer.parseInt(st[1])<=l.size())
 						{
 						l.InserAt(Integer.parseInt(st[1]),Integer.parseInt(st[2]));
 					
