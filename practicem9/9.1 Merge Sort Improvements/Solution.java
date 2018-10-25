@@ -141,7 +141,7 @@ void display(int a[])
 		}
 		else
 		{
-			System.out.print(a[i]+",");
+			System.out.print(a[i]+","+" ");
 		}
 	}
 	System.out.println("]");
