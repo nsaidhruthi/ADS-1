@@ -114,8 +114,8 @@ class Minheap
 		int c=0;
 		for(int i = 0;i<arr.length-1;)
 		{
-			double d1=(double)Integer.parseInt(arr[i]);
-			double d2=(double)Integer.parseInt(arr[i+1]);
+			double d1=(double)Double.parseDouble(arr[i]);
+			double d2=(double)Double.parseDouble(arr[i+1]);
 			if(d1<=d2)
 			{
 				i++;
