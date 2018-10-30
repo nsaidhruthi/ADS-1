@@ -1,0 +1,73 @@
+Draw all of the different heaps that can be made from the five keys A B C D E,
+ then draw all of the different heaps that can be made from the five keys A A A B B.
+  
+ MAX-HEAP:                 MAX-HEAP:        
+ FOR THIS :A B C D E       FOR THIS :A A A B B   
+1)   E                      1)     B
+   D   C                         B   A
+ B  A                          A  A
+
+2)   E                      2)   B
+   C   D                       A   B
+ A  B                        A   A
+
+3)   E
+   B   A 
+ D  C 
+
+4)   E                 
+   B   A 
+ C  D
+ 
+5)   E
+   A   B 
+ C  D 
+
+6)   E
+   A   B 
+ D  C 
+
+7)   E
+   D   C 
+ A  B
+
+8)  E
+   C   D
+ B  A
+
+MIN-HEAP:                 MIN-HEAP:        
+FOR THIS :A B C D E       FOR THIS :A A A B B 
+1)    A                    1)  A
+    B   C                    A   A
+  D  E                     B   B
+
+2)   A                     2)  A
+   B   C                    B     B
+ E  D                     A   A     
+
+3)   A                     3)   A
+   C   B                      A   B
+  D  E                      B   A
+
+4)   A                     4)  A
+   C   B                     A   B
+ E   D                     A   B
+    
+5)   A
+   B   D
+ E   C
+
+6)   A
+   B   D
+ C   E
+
+7)   A
+   B   E
+  D  C
+
+8)   A
+   B   E
+  D  C
+
+ 
+ 
