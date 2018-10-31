@@ -141,7 +141,7 @@ class Minheap
 	}
 	
 	private boolean less1(Double[] d,int j, int i) {
-		System.out.println(d.length+" "+j+" "+i);
+		//System.out.println(d.length+" "+j+" "+i);
 		return d[j]<=d[i];
 	}
 }
