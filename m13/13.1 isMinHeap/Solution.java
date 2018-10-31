@@ -118,7 +118,7 @@ class Minheap
 	{
 
 		int n=d.length-1;
-		if(d==null)
+		if(n==0)
                      {
 return false;
                       }
