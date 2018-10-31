@@ -116,8 +116,15 @@ class Minheap
 	}
 	boolean sink1(int k,Double[] d)
 	{
+
 		int n=d.length-1;
-		while(2*k<=n)
+		if(d==null)
+                     {
+return false;
+                      }
+else
+{
+               while(2*k<=n)
 		{
 			int j=2*k;
 			if(j<n&&less1(d,j+1,j))
@@ -134,7 +141,7 @@ class Minheap
 			}
 		}
 		return true;
-	}
+}	}
 	private boolean less(String[] a,int j, int i) {
 		
 		return a[j].compareTo(a[i])<=0;
