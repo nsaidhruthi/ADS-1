@@ -33,7 +33,7 @@ class heap
 	public  void sort(ArrayList<student> pq)
 	{
 	int	n=pq.size();
-		System.out.println(n);
+		//System.out.println(n);
 		n=n-1;
 		for(int k=(n/2)-1;k>=0;k--)
 			sink(pq,k,n);
