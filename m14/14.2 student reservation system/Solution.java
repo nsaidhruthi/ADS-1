@@ -6,7 +6,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Scanner;
-class student {
+
+ class student {
 String name,dob;
 int m1,m2,m3,tot;
 String cat;
@@ -22,27 +23,30 @@ public student(String[] data)
 	this.m2=Integer.parseInt(data[3]);
 	this.m3=Integer.parseInt(data[4]);
 	this.tot=Integer.parseInt(data[5]);
+	//System.out.println(tot);
 	this.cat=data[6];
 }
+
 }
 class heap
 {
 	public  void sort(ArrayList<student> pq)
 	{
 	int	n=pq.size();
-		
-		for(int k=n/2;k>=1;k--)
+		System.out.println(n);
+		n=n-1;
+		for(int k=(n/2)-1;k>=0;k--)
 			sink(pq,k,n);
-			
-		while(n>1)
+		
+		while(n>0)
 		{
-			exch(pq,1,n--);
-			sink(pq,1,n);
+			exch(pq,0,n--);
+			sink(pq,0,n);
 		}	
 	}
 	public  void sink(ArrayList<student> pq,int k,int n)
 	{
-		while(2*k+1<n-1)
+		while(2*k+1<=n)
 		{
 			int j=2*k+1;
 			if(j<n&&less(pq.get(j),pq.get(j+1)))
@@ -54,20 +58,21 @@ class heap
 		}
 	}
 	private  void exch(ArrayList<student> pq,int n2, int i) {
-		Object swap=pq.get(n2-1);
-		pq.set((n2-1),(student)pq.get(i-1));
-		pq.set((i-1),(student)swap);
+		Object swap=pq.get(n2);
+		//System.out.println(n2+" "+i);
+		pq.set((n2),(student)pq.get(i));
+		pq.set((i),(student)swap);
 		
 	}
 	private  boolean less(student a,student b) {
 		
-		if(a.tot==b.tot)
+		if((a.tot)==b.tot)
 		{
 			if(a.m3==b.m3)
 			{
 				if(a.m2==b.m2)
 				{
-					if(compareToDob(a.dob,b.dob)<0)
+					if(compareToDob(a.dob,b.dob)<=0)
 					{
 								return false;
 					}
@@ -83,10 +88,12 @@ class heap
 			else
 				return true;
 				}
+				
 		else if(a.tot<b.tot)
 			return false;
 			else 
 			return true;
+		
 	}
 	private static int compareToDob(String dOB, String dOB2) {
 		String[] a=dOB.split("-");
@@ -95,7 +102,11 @@ class heap
 		{
 			if(Integer.parseInt(a[1])==Integer.parseInt(b[1]))
 			{
-				if(Integer.parseInt(a[0])>Integer.parseInt(b[0]))
+				if(Integer.parseInt(a[0])==Integer.parseInt(b[0]))
+				{
+					return 0;
+				}
+				else if(Integer.parseInt(a[0])>Integer.parseInt(b[0]))
 					return 1;
 				else
 					return -1;
@@ -112,7 +123,6 @@ class heap
 	}
 }
 //package m13;
-
 
 public class Solution {
 	static ArrayList<student> al; 
@@ -142,7 +152,7 @@ public class Solution {
      Solution s=new Solution();
 		//BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 	Scanner s1=new Scanner(System.in);
-	al= new ArrayList<student>(31);
+	al= new ArrayList<student>(30);
 	
 		int tst,tv,ur,bc,sc,st;
 	tst=s1.nextInt();
@@ -151,7 +161,7 @@ public class Solution {
 	bc=s1.nextInt();
 	sc=s1.nextInt();
 	st=s1.nextInt();
-	System.out.println(tst+" "+st+" "+al.size());
+	//System.out.println(tst+" "+st+" "+al.size());
 	for(int i=0;i<tst;i++)
 	{
 	//	System.out.println(i);
@@ -167,13 +177,13 @@ public class Solution {
 	int cp = ur;
 	s.catfil("BC", bc, cp, ur);
 	cp+=bc;
-	s.catfil("Sc", sc, cp, ur);
+	s.catfil("SC", sc, cp, ur);
 	cp+=sc;
 	s.catfil("ST", st, cp, ur);
 	cp+=st;
 	for(int i=0;i<tv;i++)
 	{
-		System.out.println(s.al.get(i).name);
+		System.out.println(s.al.get(i).name+","+s.al.get(i).tot+","+s.al.get(i).cat);
 	}
 	}
 }
