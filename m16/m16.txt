@@ -1,0 +1,104 @@
+FILL IN THE BLANK -1
+
+private Value get(Node x, Key key) { 
+
+if (x == null) return ___________;     // Blank 1 
+
+int cmp = key.compareTo(_____________);   // Blank 2
+
+if (cmp < 0) 
+
+return get(________, key);      // Blank 3
+
+else if (cmp > 0) 
+
+return get(___________, key);    // Blank 4
+
+else return x.val; 
+
+}
+Blank1:null
+
+
+
+Blank2:x.key
+
+
+
+Blank3:x.left
+
+
+
+Blank4:x.right
+
+FILL IN THE BLANK -2
+private Node put(Node x, Key key, Value val) { 
+
+if (x == ______________)          // Blank 1
+
+return new Node(key, val); 
+
+int cmp = key.compareTo(___________);    // Blank 2
+
+if (cmp < 0) 
+
+x.left = put(_____________, key, val);    // Blank 3
+
+else if (cmp > 0) 
+
+x.right = put(_____________, key, val);   // Blank 4
+
+else 
+
+x.val = val; 
+
+return x; 
+
+}
+
+
+Blank1:-null
+
+
+
+Blank2:x.key
+
+
+
+Blank3:x.left
+
+
+Blank4:x.right
+
+FILL IN THE BLANK-3
+
+Following the above criteria, draw a BST for the following keys (you receive keys from
+
+left to right) and answer the below questions.
+
+11, 6, 8, 19, 4, 17, 43, 49, 31
+
+What will be the child nodes for element 6 ?
+4,8
+
+How many leaf nodes in the resultant tree ?
+2
+
+
+How many compares (key compares) does it take to insert the last element(31) in to the tree?
+18
+
+
+ How many compares (key compares) does it take when we call get(8) method ?
+3
+
+
+
+Suppose that a certain BST has keys that are integers between 1 and 10, and we search for 5. Which sequence below cannot be the sequence of keys examined? Why?
+a. 10, 9, 8, 7, 6, 5 
+b. 4, 10, 8, 7, 3, 5
+c. 1, 10, 2, 9, 3, 8, 4, 7, 6, 5 
+d. 2, 7, 3, 8, 4, 5 
+e. 1, 2, 10, 4, 8, 5
+
+Answer:d

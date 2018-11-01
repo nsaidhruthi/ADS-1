@@ -1,0 +1,41 @@
+Fill in the blank 1
+public void put(Key key,Value val)
+{
+	if(key==null)
+	{
+		throw new IllegalArgumentException("first argument to put() is null");
+	}
+	if(val==null)
+	{
+		delete(key);
+	}
+	for(Node x=first;x!=null;x=----x.next---)//Blank3
+        {
+         if (key.equals(-------x.key----)) { //Blank4
+                x.val = val;
+                return;
+            }
+        }
+        first = new Node(key, val,----first-------); //Blank5
+        n++;
+}
+
+
+Fill in the blank 2
+
+Answer the following Questions. The following code is for rank method in Binary search ST
+public int rank(Key key) {
+        if (key == null) throw new IllegalArgumentException("argument to rank() is null"); 
+
+
+        int lo = 0, hi = n-1; 
+        while (lo <= --hi---) {  //Blank 1
+            int mid = lo + (hi - lo) / 2; 
+            int cmp = key.compareTo(keys[------mid----]);  //Blank 2
+            if      (cmp < 0) hi = mid - 1; 
+            else if (cmp > 0) lo = mid + 1; 
+            else return ---mid---; //Blank 3
+        } 
+        return lo;
+    }
+
