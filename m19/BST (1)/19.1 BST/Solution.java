@@ -32,22 +32,22 @@ public static void main(String[] args)
 			  System.out.println(h);
 		break;
 		case "max":
-			System.out.println(o.max().name+","+o.max().author+","+o.max().price);
+			System.out.println(o.max().name+", "+o.max().author+", "+o.max().price);
 			break;
 		case "min":
-			System.out.println(o.min().name+","+o.min().author+","+o.min().price);
+			System.out.println(o.min().name+", "+o.min().author+", "+o.min().price);
 			break;
 		case "select":
 			//System.out.println(a[1]);
 		//o.rank("IT")
-			System.out.println(o.select(Integer.parseInt(a[1])).name+","+o.select(Integer.parseInt(a[1])).author+","+o.select(Integer.parseInt(a[1])).price);
+			System.out.println(o.select(Integer.parseInt(a[1])).name+", "+o.select(Integer.parseInt(a[1])).author+", "+o.select(Integer.parseInt(a[1])).price);
 		
 			break;
 		case "floor":
-			System.out.println(o.floor(a[1]).name+","+o.floor(a[1]).author+","+o.floor(a[1]).price);
+			System.out.println(o.floor(a[1]).name+", "+o.floor(a[1]).author+", "+o.floor(a[1]).price);
 			break;
 		case "ceiling":
-			System.out.println(o.ceiling(a[1]).name+","+o.ceiling(a[1]).author+","+o.ceiling(a[1]).price);
+			System.out.println(o.ceiling(a[1]).name+", "+o.ceiling(a[1]).author+", "+o.ceiling(a[1]).price);
 			break;
 			
 		}
