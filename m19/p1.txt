@@ -1,0 +1,8 @@
+private int rank(Key key, Node x) {
+        if (x == ___null____)   return 0;                              //Blank1
+        int cmp = key.compareTo(__x.key______);              //Blank2
+        if (cmp < 0)   return rank(key, ___x.left_____);        //Blank3 
+        else if (cmp > 0) return 1 + size(x.left) + rank(key, __x.right___); //Blank4 
+        else              return size(___x.left___);  //Blank5 
+
+}

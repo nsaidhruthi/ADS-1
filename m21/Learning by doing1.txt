@@ -1,0 +1,5 @@
+Is the following implementation of hashCode() legal?
+public int hasCode(){
+return 17;
+}
+Answer:iilegal

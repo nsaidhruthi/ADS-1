@@ -1,0 +1,26 @@
+Draw the 2-3 tree that results when you insert the keys E A S Y Q U E S T I O N, in that order into an initially empty 2-3 tree.
+1 e
+2 a,e
+3 a,e,s
+4  e
+   /\
+  a s/y
+5      e/s
+       /|\
+      a q u/y
+       s
+       /\
+      e  u
+      /\  /\
+  a/e/i q s/t y
+        s,e
+        /\
+     e,n  u
+     /|\    /\
+     a i q  s/t y
+     
+          s,e
+          /|\
+         e n u
+         /\ | /\
+         a i q s/t y

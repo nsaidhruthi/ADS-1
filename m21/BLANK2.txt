@@ -1,0 +1,18 @@
+After Inserting elements 1, 32, 22, 15, 33, 45, 66, 73, 10. How many collisions occur when you hashCode() as key % size after inserting keys into hashtable for given sizes below.
+
+Size = 7 
+5
+
+Size = 8
+
+3
+
+
+Size = 12
+
+5
+
+
+Size = 1
+
+8
