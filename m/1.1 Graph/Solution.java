@@ -8,7 +8,7 @@ public class Solution {
 		// TODO Auto-generated method stub
      BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 	 String s=br.readLine();
-	 System.out.println("list "+s);
+	// System.out.println("list "+s);
 		 switch(s)
 	 {
 	 case "List":
