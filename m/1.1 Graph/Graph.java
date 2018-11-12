@@ -60,6 +60,7 @@ public String toString() {
     StringBuilder s = new StringBuilder();
     s.append(V + " vertices, " + E + " edges ");
     for (int v = 0; v < V; v++) {
+      s.append("\n");
         s.append(b[v] + ": ");
         for (int w : adj[v]) {
             s.append(b[w] + " ");
