@@ -66,7 +66,7 @@ public String toString() {
     s.append(V + " vertices, " + E + " edges"+"\n");
     if(V==0||E==0)
     {
-    	System.out.println("No edges");
+    	s.append("No edges");
     }
     for (int v = 0; v < V; v++) {
     	
