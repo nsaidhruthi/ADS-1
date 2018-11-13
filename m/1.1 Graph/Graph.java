@@ -59,6 +59,10 @@ void addEddge(int v,int w)
 public String toString() {
     StringBuilder s = new StringBuilder();
     s.append(V + " vertices, " + E + " edges"+"\n");
+if(V==0||E==0)
+    {
+    	System.out.println("No edges");
+    }
     for (int v = 0; v < V; v++) {
      
         s.append(b[v] + ": ");
