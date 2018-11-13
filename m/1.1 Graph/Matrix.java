@@ -1,75 +1,86 @@
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
+import java.util.StringTokenizer;
 
 public class Matrix {
-	private final int V;
-    private int E;
-    private boolean[][] adj;
-    
-    // empty graph with V vertices
-    public Matrix(int V) {
-        if (V < 0) throw new IllegalArgumentException("Too few vertices");
-        this.V = V;
-        this.E = 0;
-        this.adj = new boolean[V][V];
+	 int a[][];
+	 String[] b;
+	 
+	 public Matrix (BufferedReader in,int s1,int s2) throws IOException
+	 {
+	
+	// int E=Integer.parseInt(in.readLine());
+		 super();
+			a = new int[s1][s2];
+			for(int i = 0;i<s1;i++)
+			{
+				for(int j = 0;j<s2;j++)
+				{
+					a[i][j]=0;
+				}
+			}
+	 String a=in.readLine();
+	
+	 StringTokenizer st=new StringTokenizer(a,",");
+	  b=new String[st.countTokens()];
+	 int j=0;
+	 while(st.hasMoreTokens())
+	 {
+	 	b[j++]=st.nextToken();
+	 	
+	 }
+	 for(int i=0;i<s1;i++)
+	 {
+	 	String z=in.readLine();
+	 	String r[]=z.split(" ");
+	 	int v=Integer.parseInt(r[0]);
+	 	//System.out.println(r[0]+ " nknddfad"+r[1]);
+	 	int w=Integer.parseInt(r[1]);
+	 	insert(v,w);
+	 }
+	 }
+	
+	public void insert(int n,int m)
+	{
+		a[n][m]=1;
+		a[m][n]=1;
+	}
+	public void display(int n,int m)
+	{
+		int count=0;
+		for(int i=0;i<n;i++)
+    	{
+    		int j=0;
+    		for(;j<m;j++)
+    		{
+    			if(a[i][j]==0)
+    				count++;	
+    		}
+    	}
+		if(count!=a.length)
+    	{
+    		int i=0; 
+    	for(i=0;i<n-1;i++)
+    	{
+    		int j=0;
+    		for(;j<n;j++)
+    		{
+    			System.out.print(a[i][j]+" ");
+    		}
+    		
+    		System.out.println();
+    	}
+    	int k=0;
+    	for(k=0;k<n-1;k++)
+		{
+			System.out.print(a[i][k]+" ");
+		}
+		System.out.print(a[i][k]);
+    	}
+    	else
+    		{System.out.println("No edges");}
+    	
     }
-    public int V() { return V; }
-    public int E() { return E; }
-
-
-    // add undirected edge v-w
-    public void addEdge(int v, int w) {
-        if (!adj[v][w]) E++;
-        adj[v][w] = true;
-        adj[w][v] = true;
-    }
-    public Iterable<Integer> adj(int v) {
-        return new AdjIterator(v);
-  }
-    private class AdjIterator implements Iterator<Integer>, Iterable<Integer> {
-        private int v;
-        private int w = 0;
-
-        AdjIterator(int v) {
-            this.v = v;
-        }
-
-        public Iterator<Integer> iterator() {
-            return this;
-        }
-
-        public boolean hasNext() {
-            while (w < V) {
-                if (adj[v][w]) return true;
-                w++;
-            }
-            return false;
-        }
-
-        public Integer next() {
-            if (!hasNext()) {
-                throw new NoSuchElementException();
-            }
-            return w++;
-        }
-
-        public void remove()  {
-            throw new UnsupportedOperationException();
-        }
-    }
-
-
-    // string representation of Graph - takes quadratic time
-    public String toString() {
-        StringBuilder s = new StringBuilder();
-        s.append(V + " " + E );
-        for (int v = 0; v < V; v++) {
-            s.append(v + ": ");
-            for (int w : adj(v)) {
-                s.append(w + " ");
-            }
-        }
-        return s.toString();
-    }
-
 }
