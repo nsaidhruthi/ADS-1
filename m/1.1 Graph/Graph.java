@@ -56,7 +56,7 @@ for(int i=0;i<E;i++)
 }
 void addEddge(int v,int w)
 {
-	
+	if(!(v==w))
 	E++;
 	adj[v].add(w);
 	adj[w].add(v);
@@ -67,6 +67,7 @@ public String toString() {
     if(V==0||E==0)
     {
     	s.append("No edges");
+        return s.toString();
     }
     for (int v = 0; v < V; v++) {
     	
