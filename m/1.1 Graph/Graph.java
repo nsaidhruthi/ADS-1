@@ -6,7 +6,7 @@ import java.util.StringTokenizer;
 public class Graph {
 	private static final Object NEWLINE = null;
 	int V;
-	int E;
+	int E=0;
 	String b[];
      Bag<Integer>[] adj;
      public Graph(int V)
@@ -32,6 +32,10 @@ public Graph(BufferedReader in) throws IOException
 {
 this(Integer.parseInt(in.readLine()));
 int E=Integer.parseInt(in.readLine());
+if(E==0)
+{
+	return;
+}
 String a=in.readLine();
 StringTokenizer st=new StringTokenizer(a,",");
  b=new String[st.countTokens()];
@@ -52,27 +56,30 @@ for(int i=0;i<E;i++)
 }
 void addEddge(int v,int w)
 {
+	
 	E++;
 	adj[v].add(w);
 	adj[w].add(v);
 }
 public String toString() {
     StringBuilder s = new StringBuilder();
-    s.append(V + " vertices, " + E + " edges"+"\n");
+    s.append(V + " vertices, " + E + " edges "+"\n");
     if(V==0||E==0)
     {
-    	s.append("No edges");
+    	System.out.println("No edges");
     }
     for (int v = 0; v < V; v++) {
-     
+    	
         s.append(b[v] + ": ");
+        //System.out.println(v);
         for (int w : adj[v]) {
-            s.append(b[w] + " ");
+        
+       
+         s.append(b[w]+" ");
         }
-           if(v!=V-1)
+        if(v!=V-1)
         s.append("\n");
     }
-
     return s.toString();
 }
 }
