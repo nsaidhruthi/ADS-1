@@ -1,4 +1,4 @@
-36 vertices, 72 edges
+36 vertices, 78 edges
 Andaman and Nicobar: Puducherry Meghalaya Manipur Odisha Karnataka Haryana Gujarat Jharkhand Chhattisgarh Arunachal Pradesh Andhra Pradesh Chandigarh 
 Andhra Pradesh: Tamil Nadu Maharashtra Goa Andaman and Nicobar 
 Arunachal Pradesh: Tamil Nadu Maharashtra Goa Andaman and Nicobar 
