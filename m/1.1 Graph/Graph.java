@@ -56,10 +56,19 @@ for(int i=0;i<E;i++)
 }
 void addEddge(int v,int w)
 {
-	if(!(v==w))
+	if(!(v==w)||!duplicate(v,w))
 	E++;
 	adj[v].add(w);
 	adj[w].add(v);
+}
+private boolean duplicate(int v2,int w) {
+	 for (int w1 : adj[v2]) {
+	        if(w1==w)
+	        {
+	        	return true;
+	        }
+        }
+	return false;
 }
 public String toString() {
     StringBuilder s = new StringBuilder();
