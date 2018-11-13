@@ -44,8 +44,14 @@ public class Matrix {
 	
 	public void insert(int n,int m)
 	{
+               if(n!=m)
+
+{
 		a[n][m]=1;
 		a[m][n]=1;
+}
+else
+return;
 	}
 	public void display(int n,int m)
 	{
