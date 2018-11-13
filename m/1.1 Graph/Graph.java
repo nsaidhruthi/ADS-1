@@ -65,10 +65,10 @@ private boolean duplicate(int v2,int w) {
 	 for (int w1 : adj[v2]) {
 	        if(w1==w)
 	        {
-	        	return true;
+	        	return false;
 	        }
         }
-	return false;
+	return true;
 }
 public String toString() {
     StringBuilder s = new StringBuilder();
